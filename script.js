@@ -35,19 +35,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         grabCursor: true,
         mousewheel: true,
         loop: true,
         speed: 400,
         autoplay: {
-            delay: 15000
+            delay: 3000
         },
-      
-        // If we need pagination
         pagination: {
           el: '.swiper-pagination',
         },
+        breakpoints: {
+            // when window width is <= 767px (mobile)
+            900: {
+                slidesPerView: 3,
+                spaceBetween: 10
+            },
+            700: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        }
     });
 });
