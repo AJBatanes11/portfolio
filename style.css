@@ -1,6 +1,5 @@
 @font-face {font-family: Space Mono Regular; src: url('/assets/Space_Mono/SpaceMono-Regular.ttf ')}
 @font-face {font-family: General Sans Regular; src: url('/assets/General_Sans/GeneralSans-Regular.otf ')}
-
 :root {
     --typeHeaderPrimary: 'Space Mono Regular', serif;
     --typeHeaderWeight: 600;
@@ -23,7 +22,6 @@
     --colorSecondary: #eaddcf;
     --colorTertiary: #f25042;
 }
-
 /* UNIVERSAL */
 ::-webkit-scrollbar {
     width: 5px;
@@ -98,7 +96,6 @@ img {
     height: auto;
 }
 /* END UNIVERSAL */
-
 /* HEADER */
 header {
     position: sticky;
@@ -141,7 +138,6 @@ header .main-header {
     }
 }
 /* END HEADER */
-
 /* BUTTONS */
 .btn {
     padding: 15px 20px;
@@ -181,7 +177,6 @@ header .main-header {
     border: 2px solid var(--colorStroke);
 }
 /* END BUTTONS */
-
 /* HERO */
 .hero {
     display: flex;
@@ -225,7 +220,6 @@ header .main-header {
     margin: 0;
 }
 /* END HERO */
-
 /* PORTFOLIO */
 .container > h1:first-child {
     margin: 0;
@@ -235,7 +229,6 @@ header .main-header {
     margin-bottom: 2.5rem;
 }
 /* END PORTFOLIO */
-
 /* SWIPER */
 .swiper-pagination {
     position: relative;
