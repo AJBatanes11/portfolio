@@ -28,10 +28,10 @@
     height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-    background: gray; 
+    background: var(--colorTertiary); 
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: green; 
+    background: var(--colorHighlight); 
 }
 * {
     box-sizing: border-box;
