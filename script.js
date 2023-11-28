@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         pagination: {
           el: '.swiper-pagination',
+          clickable: true,
         },
         breakpoints: {
             // when window width is <= 767px (mobile)
