@@ -60,3 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+(function () {
+    const locomotiveScroll = new LocomotiveScroll();
+})();

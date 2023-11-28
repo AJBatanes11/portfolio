@@ -11,15 +11,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="section_main">
     <header>
         <div class="main-header container">
             <h1>Logo</h1>
+
             <div class="header-icons medium-down--hide">
-                <a href="#" class="header-nav__link">Home</a>
-                <a href="#" class="header-nav__link">Portfolio</a>
-                <a href="#" class="header-nav__link">About</a>
-                <a href="#" class="header-nav__link">Contact Me</a>
+                <div class="header-icon">
+                    <a href="#section_main" class="header-nav__link" data-scroll-to>
+                        <i class="fa-solid fa-house"></i>
+                        <small>Home</small>
+                    </a>
+                </div>
+                <div class="header-icon">
+                    <a href="#section_portfolio" class="header-nav__link" data-scroll-to>
+                        <i class="fa-solid fa-book"></i>
+                        <small>Portfolio</small>
+                    </a>
+                </div>
+                <div class="header-icon">
+                    <a href="#" class="header-nav__link" data-scroll-to>
+                        <i class="fa-regular fa-address-card"></i>
+                        <small>About</small>
+                    </a>
+                </div>
+                <div class="header-icon">
+                    <a href="#" class="header-nav__link" data-scroll-to>
+                        <i class="fa-solid fa-phone"></i>
+                        <small>Contact Me</small>
+                    </a>
+                </div>
+
                 <label class="theme-switch header-nav__link">
                     <input type="checkbox" class="theme-switch__checkbox themeSwitch">
                     <div class="theme-switch__container">
@@ -84,7 +106,7 @@
         </div>
     </div>
 
-    <div class="section portfolio">
+    <div id="section_portfolio" class="section portfolio">
         <div class="container">
             <h1>Portfolio</h1>
             <p>Recent projects</p>
@@ -134,6 +156,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
