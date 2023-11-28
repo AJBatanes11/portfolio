@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
             if (modeBtn.checked) {
                 // DARK MODE
-                style.setProperty('--colorBackground', '#1f354d');
+                style.setProperty('--colorBackground', '#2a2b30');
                 style.setProperty('--colorHeadline', '#fdf7d9');
                 style.setProperty('--colorParagraph', '#8e9fbf');
                 style.setProperty('--colorButton', '#7378ae');
