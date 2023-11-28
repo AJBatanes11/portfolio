@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
     
-
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -61,8 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-});
 
-(function () {
-    const locomotiveScroll = new LocomotiveScroll();
-})();
+    (function () {
+        const locomotiveScroll = new LocomotiveScroll();
+    })();
+    
+});
