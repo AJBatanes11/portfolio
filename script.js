@@ -6,17 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
             var style = document.documentElement.style;
     
             if (modeBtn.checked) {
-                style.setProperty('--colorBackground', '#55423d');
-                style.setProperty('--colorHeadline', '#fffffe');
-                style.setProperty('--colorParagraph', '#fff3ec');
-                style.setProperty('--colorButton', '#ffc0ad');
-                style.setProperty('--colorButtonText', '#271c19');
-                style.setProperty('--colorStroke', '#140d0b');
-                style.setProperty('--colorMain', '#fff3ec');
-                style.setProperty('--colorHighlight', '#e78fb3');
-                style.setProperty('--colorSecondary', '#ffc0ad');
-                style.setProperty('--colorTertiary', '#9656a1');
+                // DARK MODE
+                style.setProperty('--colorBackground', '#060b10');
+                style.setProperty('--colorHeadline', '#fdf7d9');
+                style.setProperty('--colorParagraph', '#8e9fbf');
+                style.setProperty('--colorButton', '#7378ae');
+                style.setProperty('--colorButtonText', '#000001');
+                style.setProperty('--colorStroke', '#fdf7d9');
+                style.setProperty('--colorMain', '#000001');
+                style.setProperty('--colorHighlight', '#7378ae');
+                style.setProperty('--colorSecondary', '#125320');
+                style.setProperty('--colorTertiary', '#0dafbd');
             } else {
+                // DEFAULT
                 style.setProperty('--colorBackground', '#f9f4ef');
                 style.setProperty('--colorHeadline', '#020826');
                 style.setProperty('--colorParagraph', '#716040');
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         grabCursor: true,
         mousewheel: true,
         loop: true,
-        speed: 400,
+        speed: 800,
         autoplay: {
             delay: 3000
         },
