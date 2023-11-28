@@ -213,6 +213,9 @@ header .main-header {
     margin: auto;
     border-radius: 50%;
     width: 80%;
+    -webkit-box-shadow: 3px 3px 30px -10px var(--colorHighlight);
+    -moz-box-shadow: 3px 3px 30px -10px var(--colorHighlight);
+    box-shadow: 3px 3px 30px -10px var(--colorHighlight);
 }
 @media only screen and (max-width:700px) {
     .hero {
