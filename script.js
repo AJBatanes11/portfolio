@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         spaceBetween: 30,
         grabCursor: true,
+        // mousewheel: true,
         loop: true,
         speed: 1600,
         autoplay: {
