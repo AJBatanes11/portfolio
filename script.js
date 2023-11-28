@@ -34,16 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     const swiper = new Swiper('.swiper', {
-        // Optional parameters
         direction: 'horizontal',
         slidesPerView: 1,
         spaceBetween: 30,
         grabCursor: true,
-        mousewheel: true,
         loop: true,
         speed: 1600,
         autoplay: {
-            delay: 3000
+            delay: 3000000
         },
         pagination: {
           el: '.swiper-pagination',
