@@ -24,6 +24,9 @@
 }
 
 /* UNIVERSAL */
+html {
+    scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -83,6 +86,7 @@ th {
     color: var(--colorHighlight);
 }
 .section.main {
+    min-height: 70vh;
     padding-top: 0;
 } 
 .container {
@@ -191,7 +195,7 @@ header .main-header {
 /* HERO */
 .hero {
     display: flex;
-    margin-top: 5rem;
+    margin-top: 10rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -211,6 +215,7 @@ header .main-header {
 }
 @media only screen and (max-width:700px) {
     .hero {
+        margin-top: 5rem;
         flex-direction: column-reverse;
     }
     .hero-profile, .hero-content {
