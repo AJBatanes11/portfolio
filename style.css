@@ -1,10 +1,10 @@
 @font-face {font-family: Space Mono Regular; src: url('/assets/Space_Mono/SpaceMono-Regular.ttf ')}
 @font-face {font-family: General Sans Regular; src: url('/assets/General_Sans/GeneralSans-Regular.otf ')}
 :root {
-    --typeHeaderPrimary: 'Space Mono Regular', serif;
+    --typeHeaderPrimary: 'Montserrat', sans-serif;
     --typeHeaderWeight: 600;
 
-    --typeBasePrimary: 'General Sans Regular', sans-serif;
+    --typeBasePrimary: 'DM Sans', sans-serif;
     --typeBaseWeight: 400;
     --typeBaseSize: 18px;
     --typeBaseLineHeight: 1.8;
@@ -22,6 +22,7 @@
     --colorSecondary: #eaddcf;
     --colorTertiary: #f25042;
 }
+
 /* UNIVERSAL */
 ::-webkit-scrollbar {
     width: 5px;
@@ -132,6 +133,10 @@ header .main-header {
     justify-content: center;
     align-items: center;
     
+}
+.header-nav__link small, .mobile-navigation {
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 @media only screen and (max-width:700px) {
     .medium-down--hide {
