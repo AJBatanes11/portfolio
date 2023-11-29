@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     var modeBtns = document.querySelectorAll('.themeSwitch');
 
     modeBtns.forEach(modeBtn => {
@@ -72,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
           clickable: true,
         },
         breakpoints: {
-            // when window width is <= 767px (mobile)
             900: {
                 slidesPerView: 3,
                 spaceBetween: 10
@@ -95,7 +95,6 @@ AOS.init({
     debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
     
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 120, // offset (in px) from the original trigger point
     delay: 0, // values from 0 to 3000, with step 50ms
     duration: 400, // values from 0 to 3000, with step 50ms
@@ -105,3 +104,13 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
   
   });
+
+function openNav() {
+    document.getElementById("drawerNav").style.width = "60%";
+    console.log('open');
+}
+  
+function closeNav() {
+    document.getElementById("drawerNav").style.width = "0%";
+    console.log('close');
+}
