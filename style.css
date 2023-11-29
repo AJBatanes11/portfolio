@@ -256,6 +256,12 @@ header .main-header {
     position: relative;
     margin: 10px auto;
 }
+.swiper-pagination-bullet {
+    background-color: var(--colorStroke);
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--colorButton);
+}
 .swiper-slide {
 	height: 300px;
 }
