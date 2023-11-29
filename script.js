@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
     modeBtns.forEach(modeBtn => {
         modeBtn.addEventListener("change", () => {
             var style = document.documentElement.style;
+
+            var penLogo = document.getElementById('penLogo');
+            var oxgnLogo = document.getElementById('oxgnLogo');
+            var bocuLogo = document.getElementById('bocuLogo');
+            var rgtLogo = document.getElementById('rgtLogo');
+            var formeLogo = document.getElementById('formeLogo');
+            var memoLogo = document.getElementById('memoLogo');
     
             if (modeBtn.checked) {
                 // DARK MODE
@@ -17,6 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 style.setProperty('--colorHighlight', '#7378ae');
                 style.setProperty('--colorSecondary', '#125320');
                 style.setProperty('--colorTertiary', '#0dafbd');
+
+                penLogo.src = '/assets/images/logo_penshoppe__white.svg';
+                oxgnLogo.src = '/assets/images/logo_oxgn__white.png';
+                bocuLogo.src = '/assets/images/logo_bocu__white.png';
+                rgtLogo.src = '/assets/images/logo_regatta__white.png';
+                formeLogo.src = '/assets/images/logo_forme__white.png';
+                memoLogo.src = '/assets/images/logo_memo__white.png';
+
             } else {
                 // DEFAULT
                 style.setProperty('--colorBackground', '#f9f4ef');
@@ -29,7 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 style.setProperty('--colorHighlight', '#8c7851');
                 style.setProperty('--colorSecondary', '#eaddcf');
                 style.setProperty('--colorTertiary', '#f25042');
+
+                penLogo.src = '/assets/images/logo_penshoppe__red.svg';
+                oxgnLogo.src = '/assets/images/logo_oxgn__black.png';
+                bocuLogo.src = '/assets/images/logo_bocu__black.png';
+                rgtLogo.src = '/assets/images/logo_regatta__black.png';
+                formeLogo.src = '/assets/images/logo_forme__black.png';
+                memoLogo.src = '/assets/images/logo_memo__black.png';
             }
+
         });
     });
     
