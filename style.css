@@ -39,10 +39,10 @@ html {
 }
 * {
     box-sizing: border-box;
-    transition: color 0.3s linear, background-color 0.3s linear, border-color 0.3s linear;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 body {
-    color: var(--colorBase);
+    color: var(--colorMain);
     background-color: var(--colorBackground);
     font-family: var(--typeBasePrimary);
     font-weight: var(--typeBaseWeight);
@@ -70,7 +70,7 @@ th {
     font-weight:var(--typeHeaderWeight);
 }
 .section {
-    color: var(--colorBase);
+    color: var(--colorMain);
     background-color: var(--colorBackground);
     padding-top: 7rem;
     padding-bottom: 7rem;
@@ -128,7 +128,7 @@ header .main-header {
     align-items: center;
 } 
 .header-nav__link, .mobile-navigation {
-    color: var(--colorHeading);
+    color: var(--colorHeadline);
     margin-left: 1rem;
     font-size: 1.2rem;
     font-weight: 700;
@@ -137,11 +137,13 @@ header .main-header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 .header-nav__link small, .mobile-navigation {
     text-transform: uppercase;
     font-size: 0.8rem;
+}
+.header-nav__link:hover {
+    color: var(--colorHeadline);
 }
 @media only screen and (max-width:700px) {
     .medium-down--hide {
@@ -268,6 +270,7 @@ header .main-header {
     padding: 20px;
 }
 .swiper-cards p {
+    position: relative;
     color: var(--colorParagraph);
 }
 .swiper-cards .card-link {
@@ -280,5 +283,14 @@ header .main-header {
 }
 .swiper-cards .card-link .btn {
     width: 100%;
+    height: auto;
+}
+.card-content {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+    width: 80%;
+    margin: auto;
 }
 /* END SWIPER */
