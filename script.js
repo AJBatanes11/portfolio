@@ -3,17 +3,17 @@
 // });
 
 var myLoader;
-function loading() {
-    document.getElementById('loader').style.display = 'block';
-    document.getElementById('main_content').style.display = 'none';
-    myLoader = setTimeout(showPage, 500);
-}
 function loader() {
+    myLoader = setTimeout(showPage, 1500);
+}
+function loading() {
+    document.getElementById('loader').classList.add('active');
+    document.getElementById('main_content').classList.remove('active');
     myLoader = setTimeout(showPage, 500);
 }
 function showPage() {
-    document.getElementById('loader').style.display = 'none';
-    document.getElementById('main_content').style.display = 'block';
+    document.getElementById('loader').classList.remove('active');
+    document.getElementById('main_content').classList.add('active');
     myLoader = clearTimeout(myLoader);
 }
 
@@ -43,6 +43,7 @@ modeBtns.forEach(modeBtn => {
             style.setProperty('--colorSecondary', '#125320');
             style.setProperty('--colorTertiary', '#0dafbd');
             style.setProperty('--colorOverlay', '255,255,255');
+            style.setProperty('--colorOverlay2', '0,0,0');
 
             penLogo.src = 'assets/images/logo_penshoppe__white.svg';
             oxgnLogo.src = 'assets/images/logo_oxgn__white.png';
@@ -65,6 +66,7 @@ modeBtns.forEach(modeBtn => {
             style.setProperty('--colorSecondary', '#eaddcf');
             style.setProperty('--colorTertiary', '#f25042');
             style.setProperty('--colorOverlay', '0,0,0');
+            style.setProperty('--colorOverlay2', '255,255,255');
 
             penLogo.src = 'assets/images/logo_penshoppe__red.svg';
             oxgnLogo.src = 'assets/images/logo_oxgn__black.png';
