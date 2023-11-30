@@ -132,7 +132,7 @@ img {
     opacity: 1;
 }
 .spinner-container {
-    position: absolute;
+    position: fixed;
     visibility: hidden;
     opacity: 0;
     width: 100%;
