@@ -145,7 +145,7 @@ img {
     height: 100%;
     background-color: rgba(var(--colorOverlay2));
     z-index: 99999;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 .spinner-container.active {
     visibility: visible;
