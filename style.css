@@ -21,6 +21,8 @@
     --colorHighlight: #8c7851;
     --colorSecondary: #eaddcf;
     --colorTertiary: #f25042;
+
+    --colorOverlay: 0,0,0;
 }
 
 /* UNIVERSAL */
@@ -39,7 +41,7 @@ html {
 }
 * {
     box-sizing: border-box;
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 body {
     color: var(--colorMain);
@@ -100,6 +102,25 @@ img {
     max-width: 100%;
     height: auto;
 }
+#overlay {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(var(--colorOverlay), 0.5);
+    z-index: 99997;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+#overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
 /* END UNIVERSAL */
 /* HEADER */
 header {
@@ -111,7 +132,7 @@ header {
     margin: 0;
     padding: 10px 25px;
     color: var(--colorHeadline);
-    box-shadow: 0 5px 5px -5px rgba(0,0,0,.2);
+    box-shadow: 0 5px 5px -5px rgba(var(--colorOverlay), 0.2);
     z-index: 99999;
 }
 header .main-header {
@@ -165,9 +186,12 @@ header .main-header {
     top: 0;
     right: 0;
     background-color: var(--colorBackground);
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,.2);
+    box-shadow: 5px 5px 5px 5px rgba(var(--colorOverlay), 0.5);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.2s ease-in-out;
+}
+.drawer-nav.active {
+    width: 60%;
 }
 .drawer-nav__container {
     display: flex;
@@ -177,6 +201,7 @@ header .main-header {
     width: 100%;
     height: auto;
     align-items: flex-start;
+    padding-left: 10%;
 }
 .drawer-nav__container > .header-icon small {
     font-size: 1rem;
@@ -194,7 +219,7 @@ header .main-header {
 .drawer-nav__container > .header-icon > .header-nav__link > i {
     margin-right: 15px;
 }
-.closeNav-btn {
+.close-btn {
     padding: 5px 10px;
     text-align: center;
     float: right;
@@ -205,7 +230,7 @@ header .main-header {
 .btn {
     padding: 15px 20px;
     border: none;
-    transition: all 0.3s linear;
+    transition: all 0.2s ease-in-out;
     font-weight: 700;
     border-radius: 5px;
 }

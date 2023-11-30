@@ -1,88 +1,115 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-    var modeBtns = document.querySelectorAll('.themeSwitch');
+// });
 
-    modeBtns.forEach(modeBtn => {
-        modeBtn.addEventListener("change", () => {
-            var style = document.documentElement.style;
+var modeBtns = document.querySelectorAll('.themeSwitch');
 
-            var penLogo = document.getElementById('penLogo');
-            var oxgnLogo = document.getElementById('oxgnLogo');
-            var bocuLogo = document.getElementById('bocuLogo');
-            var rgtLogo = document.getElementById('rgtLogo');
-            var formeLogo = document.getElementById('formeLogo');
-            var memoLogo = document.getElementById('memoLogo');
-    
-            if (modeBtn.checked) {
-                // DARK MODE
-                style.setProperty('--colorBackground', '#2a2b30');
-                style.setProperty('--colorHeadline', '#fdf7d9');
-                style.setProperty('--colorParagraph', '#8e9fbf');
-                style.setProperty('--colorButton', '#7378ae');
-                style.setProperty('--colorButtonText', '#000001');
-                style.setProperty('--colorStroke', '#fdf7d9');
-                style.setProperty('--colorMain', '#000001');
-                style.setProperty('--colorHighlight', '#7378ae');
-                style.setProperty('--colorSecondary', '#125320');
-                style.setProperty('--colorTertiary', '#0dafbd');
+modeBtns.forEach(modeBtn => {
+    modeBtn.addEventListener("change", () => {
+        var style = document.documentElement.style;
 
-                penLogo.src = '/assets/images/logo_penshoppe__white.svg';
-                oxgnLogo.src = '/assets/images/logo_oxgn__white.png';
-                bocuLogo.src = '/assets/images/logo_bocu__white.png';
-                rgtLogo.src = '/assets/images/logo_regatta__white.png';
-                formeLogo.src = '/assets/images/logo_forme__white.png';
-                memoLogo.src = '/assets/images/logo_memo__white.png';
+        var penLogo = document.getElementById('penLogo');
+        var oxgnLogo = document.getElementById('oxgnLogo');
+        var bocuLogo = document.getElementById('bocuLogo');
+        var rgtLogo = document.getElementById('rgtLogo');
+        var formeLogo = document.getElementById('formeLogo');
+        var memoLogo = document.getElementById('memoLogo');
 
-            } else {
-                // DEFAULT
-                style.setProperty('--colorBackground', '#f9f4ef');
-                style.setProperty('--colorHeadline', '#020826');
-                style.setProperty('--colorParagraph', '#716040');
-                style.setProperty('--colorButton', '#8c7851');
-                style.setProperty('--colorButtonText', '#fffffe');
-                style.setProperty('--colorStroke', '#020826');
-                style.setProperty('--colorMain', '#fffffe');
-                style.setProperty('--colorHighlight', '#8c7851');
-                style.setProperty('--colorSecondary', '#eaddcf');
-                style.setProperty('--colorTertiary', '#f25042');
+        if (modeBtn.checked) {
+            // DARK MODE
+            style.setProperty('--colorBackground', '#2a2b30');
+            style.setProperty('--colorHeadline', '#fdf7d9');
+            style.setProperty('--colorParagraph', '#8e9fbf');
+            style.setProperty('--colorButton', '#7378ae');
+            style.setProperty('--colorButtonText', '#000001');
+            style.setProperty('--colorStroke', '#fdf7d9');
+            style.setProperty('--colorMain', '#000001');
+            style.setProperty('--colorHighlight', '#7378ae');
+            style.setProperty('--colorSecondary', '#125320');
+            style.setProperty('--colorTertiary', '#0dafbd');
+            style.setProperty('--colorOverlay', '255,255,255');
 
-                penLogo.src = '/assets/images/logo_penshoppe__red.svg';
-                oxgnLogo.src = '/assets/images/logo_oxgn__black.png';
-                bocuLogo.src = '/assets/images/logo_bocu__black.png';
-                rgtLogo.src = '/assets/images/logo_regatta__black.png';
-                formeLogo.src = '/assets/images/logo_forme__black.png';
-                memoLogo.src = '/assets/images/logo_memo__black.png';
-            }
+            penLogo.src = '/assets/images/logo_penshoppe__white.svg';
+            oxgnLogo.src = '/assets/images/logo_oxgn__white.png';
+            bocuLogo.src = '/assets/images/logo_bocu__white.png';
+            rgtLogo.src = '/assets/images/logo_regatta__white.png';
+            formeLogo.src = '/assets/images/logo_forme__white.png';
+            memoLogo.src = '/assets/images/logo_memo__white.png';
 
-        });
-    });
-    
-    const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
-        slidesPerView: 1,
-        spaceBetween: 30,
-        grabCursor: true,
-        // mousewheel: true,
-        loop: true,
-        speed: 1600,
-        autoplay: {
-            delay: 3000000
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-            900: {
-                slidesPerView: 3,
-                spaceBetween: 10
-            },
-            700: {
-                slidesPerView: 2,
-                spaceBetween: 10
-            }
+        } else {
+            // DEFAULT
+            style.setProperty('--colorBackground', '#f9f4ef');
+            style.setProperty('--colorHeadline', '#020826');
+            style.setProperty('--colorParagraph', '#716040');
+            style.setProperty('--colorButton', '#8c7851');
+            style.setProperty('--colorButtonText', '#fffffe');
+            style.setProperty('--colorStroke', '#020826');
+            style.setProperty('--colorMain', '#fffffe');
+            style.setProperty('--colorHighlight', '#8c7851');
+            style.setProperty('--colorSecondary', '#eaddcf');
+            style.setProperty('--colorTertiary', '#f25042');
+            style.setProperty('--colorOverlay', '0,0,0');
+
+            penLogo.src = '/assets/images/logo_penshoppe__red.svg';
+            oxgnLogo.src = '/assets/images/logo_oxgn__black.png';
+            bocuLogo.src = '/assets/images/logo_bocu__black.png';
+            rgtLogo.src = '/assets/images/logo_regatta__black.png';
+            formeLogo.src = '/assets/images/logo_forme__black.png';
+            memoLogo.src = '/assets/images/logo_memo__black.png';
         }
+
     });
+});
+
+function overlay () {
+    const overlay = document.querySelector('#overlay');
+    if (overlay.classList.contains('active')) {
+        overlay.classList.remove('active');
+    } else {
+        overlay.classList.add('active');
+    }
+}
+
+var navBtn = document.querySelectorAll('.navDrawerBtn, #overlay');
+navBtn.forEach(btn => {
+    var drawerNav = document.querySelector('#drawerNav');
+
+    btn.addEventListener("click", () => {
+        if (drawerNav.classList.contains('active')) {
+            drawerNav.classList.remove('active');
+            overlay();
+        } else {
+            drawerNav.classList.add('active');
+            overlay();
+        }
+    })
+})
+
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    // mousewheel: true,
+    loop: true,
+    speed: 1600,
+    autoplay: {
+        delay: 3000000
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+        900: {
+            slidesPerView: 3,
+            spaceBetween: 10
+        },
+        700: {
+            slidesPerView: 2,
+            spaceBetween: 10
+        }
+    }
 });
 
 AOS.init({
@@ -104,13 +131,3 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
   
   });
-
-function openNav() {
-    document.getElementById("drawerNav").style.width = "60%";
-    console.log('open');
-}
-  
-function closeNav() {
-    document.getElementById("drawerNav").style.width = "0%";
-    console.log('close');
-}

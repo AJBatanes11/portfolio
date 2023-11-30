@@ -17,8 +17,7 @@
 
 <body id="section_main">
     <header>
-        <div class="overlay">
-        </div>
+        <div id="overlay" class="overlay"></div>
         <div class="main-header container">
             <h1>Logo</h1>
 
@@ -90,37 +89,37 @@
                         </div>
                     </div>
                 </label>
-                <div class="hamburger" onclick="openNav();">
+                <div class="hamburger navDrawerBtn">
                     <i class="fa-solid fa-bars fa-2xl"></i>
                 </div>
             </div>
         </div>
         <div id="drawerNav" class="drawer-nav">
-            <div class="closeNav-btn" onclick="closeNav();">
+            <div class="close-btn navDrawerBtn">
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <div class="drawer-nav__container">
 
-                    <div class="header-icon" onclick="closeNav();">
-                        <a href="#section_main" class="header-nav__link" data-scroll-to>
+                    <div class="header-icon">
+                        <a href="#section_main" class="header-nav__link navDrawerBtn" data-scroll-to>
                             <i class="fa-solid fa-house"></i>
                             <small>Home</small>
                         </a>
                     </div>
-                    <div class="header-icon" onclick="closeNav();">
-                        <a href="#section_portfolio" class="header-nav__link" data-scroll-to>
+                    <div class="header-icon">
+                        <a href="#section_portfolio" class="header-nav__link navDrawerBtn" data-scroll-to>
                             <i class="fa-solid fa-book"></i>
                             <small>Portfolio</small>
                         </a>
                     </div>
-                    <div class="header-icon" onclick="closeNav();">
-                        <a href="#section_about" class="header-nav__link" data-scroll-to>
+                    <div class="header-icon">
+                        <a href="#section_about" class="header-nav__link navDrawerBtn" data-scroll-to>
                             <i class="fa-regular fa-address-card"></i>
                             <small>About</small>
                         </a>
                     </div>
-                    <div class="header-icon" onclick="closeNav();">
-                        <a href="#section_contact" class="header-nav__link" data-scroll-to>
+                    <div class="header-icon">
+                        <a href="#section_contact" class="header-nav__link navDrawerBtn" data-scroll-to>
                             <i class="fa-solid fa-phone"></i>
                             <small>Contact Me</small>
                         </a>
