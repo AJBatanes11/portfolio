@@ -29,12 +29,12 @@ modeBtns.forEach(modeBtn => {
             style.setProperty('--colorTertiary', '#0dafbd');
             style.setProperty('--colorOverlay', '255,255,255');
 
-            penLogo.src = '/assets/images/logo_penshoppe__white.svg';
-            oxgnLogo.src = '/assets/images/logo_oxgn__white.png';
-            bocuLogo.src = '/assets/images/logo_bocu__white.png';
-            rgtLogo.src = '/assets/images/logo_regatta__white.png';
-            formeLogo.src = '/assets/images/logo_forme__white.png';
-            memoLogo.src = '/assets/images/logo_memo__white.png';
+            penLogo.src = 'assets/images/logo_penshoppe__white.svg';
+            oxgnLogo.src = 'assets/images/logo_oxgn__white.png';
+            bocuLogo.src = 'assets/images/logo_bocu__white.png';
+            rgtLogo.src = 'assets/images/logo_regatta__white.png';
+            formeLogo.src = 'assets/images/logo_forme__white.png';
+            memoLogo.src = 'assets/images/logo_memo__white.png';
 
         } else {
             // DEFAULT
@@ -50,12 +50,12 @@ modeBtns.forEach(modeBtn => {
             style.setProperty('--colorTertiary', '#f25042');
             style.setProperty('--colorOverlay', '0,0,0');
 
-            penLogo.src = '/assets/images/logo_penshoppe__red.svg';
-            oxgnLogo.src = '/assets/images/logo_oxgn__black.png';
-            bocuLogo.src = '/assets/images/logo_bocu__black.png';
-            rgtLogo.src = '/assets/images/logo_regatta__black.png';
-            formeLogo.src = '/assets/images/logo_forme__black.png';
-            memoLogo.src = '/assets/images/logo_memo__black.png';
+            penLogo.src = 'assets/images/logo_penshoppe__red.svg';
+            oxgnLogo.src = 'assets/images/logo_oxgn__black.png';
+            bocuLogo.src = 'assets/images/logo_bocu__black.png';
+            rgtLogo.src = 'assets/images/logo_regatta__black.png';
+            formeLogo.src = 'assets/images/logo_forme__black.png';
+            memoLogo.src = 'assets/images/logo_memo__black.png';
         }
 
     });
