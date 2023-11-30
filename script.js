@@ -2,6 +2,21 @@
 
 // });
 
+var myLoader;
+function loading() {
+    document.getElementById('loader').style.display = 'block';
+    document.getElementById('main_content').style.display = 'none';
+    myLoader = setTimeout(showPage, 500);
+}
+function loader() {
+    myLoader = setTimeout(showPage, 500);
+}
+function showPage() {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('main_content').style.display = 'block';
+    myLoader = clearTimeout(myLoader);
+}
+
 var modeBtns = document.querySelectorAll('.themeSwitch');
 
 modeBtns.forEach(modeBtn => {
@@ -35,6 +50,7 @@ modeBtns.forEach(modeBtn => {
             rgtLogo.src = 'assets/images/logo_regatta__white.png';
             formeLogo.src = 'assets/images/logo_forme__white.png';
             memoLogo.src = 'assets/images/logo_memo__white.png';
+            loading();
 
         } else {
             // DEFAULT
@@ -56,6 +72,7 @@ modeBtns.forEach(modeBtn => {
             rgtLogo.src = 'assets/images/logo_regatta__black.png';
             formeLogo.src = 'assets/images/logo_forme__black.png';
             memoLogo.src = 'assets/images/logo_memo__black.png';
+            loading();
         }
 
     });
@@ -87,26 +104,26 @@ navBtn.forEach(btn => {
 
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 1.1,
+    spaceBetween: 10,
     grabCursor: true,
     // mousewheel: true,
     loop: true,
-    speed: 1600,
+    speed: 200,
     autoplay: {
-        delay: 3000000
+        delay: 3000
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
     breakpoints: {
-        900: {
-            slidesPerView: 3,
-            spaceBetween: 10
-        },
         700: {
             slidesPerView: 2,
+            spaceBetween: 10
+        },
+        1150: {
+            slidesPerView: 3,
             spaceBetween: 10
         }
     }
