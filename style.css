@@ -252,7 +252,26 @@ header .main-header {
     width: 100%;
     height: auto;
     align-items: flex-start;
-    padding-left: 10%;
+    padding: 0 5%;
+}
+.drawer-nav__container .header-icon {
+    position: relative;
+    width: 100%;
+}
+.drawer-nav__container .header-icon a:after {
+    content: "";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0%;  
+    position: absolute; 
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s;
+    z-index: -1;
+}
+.drawer-nav__container .header-icon a:hover:after {
+    width: 100%; 
+    background-color: var(--colorHighlight);
 }
 .drawer-nav__container > .header-icon small {
     font-size: 1rem;

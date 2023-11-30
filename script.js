@@ -3,17 +3,20 @@
 // });
 
 var myLoader;
+var loaderVar = document.getElementById('loader');
+var mainContent = document.getElementById('main_content');
+
 function loader() {
     myLoader = setTimeout(showPage, 1500);
 }
 function loading() {
-    document.getElementById('loader').classList.add('active');
-    document.getElementById('main_content').classList.remove('active');
+    loaderVar.classList.add('active');
+    mainContent.classList.remove('active');
     myLoader = setTimeout(showPage, 500);
 }
 function showPage() {
-    document.getElementById('loader').classList.remove('active');
-    document.getElementById('main_content').classList.add('active');
+    loaderVar.classList.remove('active');
+    mainContent.classList.add('active');
     myLoader = clearTimeout(myLoader);
 }
 
