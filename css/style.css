@@ -40,6 +40,9 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--colorHighlight); 
 }
+:focus {
+    outline: none;
+}
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
