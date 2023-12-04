@@ -111,6 +111,7 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 1.1,
     spaceBetween: 10,
     grabCursor: true,
+    centeredSlides: true,
     // mousewheel: true,
     loop: true,
     speed: 200,
