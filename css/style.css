@@ -42,6 +42,7 @@ html {
 }
 * {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 body {
