@@ -81,6 +81,7 @@ th {
     background-color: var(--colorBackground);
     padding-top: 7rem;
     padding-bottom: 7rem;
+    min-height: 85vh;
 }
 .section:nth-child(odd) {
     color: var(--colorParagraph);
@@ -108,6 +109,7 @@ th {
 }
 img {
     max-width: 100%;
+    max-height: 100%;
     height: auto;
 }
 #main_content {
@@ -474,11 +476,16 @@ header .main-header {
     height: auto;
 }
 .card-content {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 40%;
     transform: translate(-50%, -40%);
-    width: 80%;
+    width: 80%; */
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 /* END SWIPER */
